@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Youtube</title>
+  <style>
+     .subscribe{
+      background-color: black;
+      border-radius: 20px;
+      padding: 10px;
+      color: white;
+      font-size: medium;
+      cursor: pointer;
+     }
+     .Subscribed{
+      background-color: lightgrey;
+      color: black;
+      font-weight: bold;
+     }
+
+  </style>
+
+
+
+
+</head>
+<body>
+<p> Subscription handler</p>
+  <button onclick="subscribe()" class="js-subscribe subscribe">Subscribe</button>
+
+<P>Shipping cost calculator</P>
+<input  placeholder="Cost of item" onkeypress="if(event.key=='Enter') shippingcalculator()">
+<button onclick="shippingcalculator()">calculate</button>
+
+
+
+<p >Total Cost including shipping charges is :<span class="cost"></span></p>
+<script>
+  
+  document.title="Amazon Subscription & shipping cost calculator";
+  
+  
+
+  function subscribe()
+  { if(document.querySelector('.js-subscribe').innerHTML=="Subscribe")
+       { document.querySelector('.js-subscribe').innerHTML="Subscribed 🔔";
+         document.querySelector('.js-subscribe').classList.add('Subscribed');  
+      }
+     else
+       { document.querySelector('.js-subscribe').innerHTML="Subscribe";
+       document.querySelector('.js-subscribe').classList.remove('Subscribed');
+      }
+  }
+ 
+  function shippingcalculator()
+  { 
+    console.log(document.querySelector('input'));
+    let cost=Number(document.querySelector('input').value);
+    
+    console.log(cost);
+     if (cost>40)
+      { document.querySelector('.cost').innerHTML=cost;}
+     else  
+      {document.querySelector('.cost').innerHTML=(cost+10);}     
+  }
+</script>
+</body>
+
+</html>

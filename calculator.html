@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+</head>
+<style>
+  button  {
+  width: 50px;
+  border-radius: 20%;
+  height: 50px;
+  border-width: 10px;
+  border-color: lightgrey;
+  }
+ .result{
+  text-align:end;
+  width: 200px;
+  border-width: 20px;
+  border-color: black;
+  font-size: larger;
+ }
+ .History{
+  text-align:end;
+  width: 200px;
+  color:grey;
+ }
+</style>
+<body>
+    
+  <P class="js-result result" >  <br> </P>
+  <h4 class="js-History">  </h4>
+  <p> 
+    <button onclick="calculate(1)"> 1  </button> 
+    <button onclick="calculate(2)"> 2  </button> 
+    <button onclick="calculate(3)"> 3  </button>
+    <button onclick="calculate('H')"> H </button> 
+    <br><br>
+    <button onclick="calculate(4)"> 4  </button> 
+    <button onclick="calculate(5)"> 5  </button> 
+    <button onclick="calculate(6)"> 6  </button> 
+    <button onclick="calculate('+')"> +  </button> 
+    <br><br>
+    <button onclick="calculate(7)"> 7  </button> 
+    <button onclick="calculate(8)"> 8  </button> 
+    <button onclick="calculate(9)"> 9  </button> 
+    <button onclick="calculate('-')"> -  </button> 
+    <br><br>
+    <button onclick="calculate('C')"> C  </button>
+    <button onclick="calculate('*')"> *  </button> 
+    <button onclick="calculate('/')"> /  </button> 
+    <button onclick="calculate('=')"> =  </button> 
+    <br><br>
+ 
+    
+<script>
+ calculation="";
+ 
+
+function calculate(input)
+ {  if(input=='=')
+     { sessionStorage.setItem('H',calculation+'=');
+      calculation=eval(calculation); }
+    else if(input=='C')
+      calculation=""; 
+    else if(input=='H')
+      document.getElementsByClassName('js-History')[0].innerHTML=sessionStorage.getItem('H');
+    else
+      calculation+=input;
+     
+    console.log(calculation);
+    document.querySelector('.js-result').innerHTML=calculation ;
+    
+ }
+</script>
+</body>
+</html>

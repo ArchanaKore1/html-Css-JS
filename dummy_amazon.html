@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- defines how the website should be displayed ,when content=width=device-widththen it fits to device size.-->
+  
+  <meta name="desc" content="My personal shopping website.Get all you like"> 
+   <!--desc defines what should be displayed when search engine searches this website.-->
+  
+  <title>Amazon</title>
+   <!-- website name in title bar-->
+  
+  <link rel="icon" type="images/png" href="images/amazon.png" >
+   <!-- adds amazon icon in the title bar.-->
+
+  <link rel="stylesheet" href="Styles/dummy_amazon.css">
+
+</head>
+
+<body>
+  <button class="Add" onclick="alert('Added to cart');cartQuantity++;console.log(`cartQuantity: ${cartQuantity}`); ">Add to cart</button>  
+   <button class="Buy" onclick="alert('Purchased')"; cartQuantity=0;>Buy Now</button>
+
+   <script>
+   let cartQuantity=0;
+
+   </script>
+</body>
+
+</html>

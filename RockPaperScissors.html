@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors</title>  
+  <link rel="stylesheet" href="Styles/RockPaperScissors.css">
+  
+</head>
+
+<body>
+  <div class="center">
+  <img src="/images/rock paper sci.jpg"  style="align-self: centre;width: 500px;height:400px;padding:0px ">
+  <h2>Pick Your move by clicking on the images below</h2>
+   
+  <button class="selection" onclick=" let pick1=computerMove();comparemove(pick1,'Rock');">✊ </button>
+  
+  <button class="selection" onclick=" let pick2=computerMove();comparemove(pick2,'Paper');">✋</button>
+  
+  <button class="selection" onclick=" let pick3=computerMove(); comparemove(pick3,'Scissors');">✌️</button>
+  
+  <br><br><h3 class="computermove" style="text-align: center;"> </h3>
+
+  <h2 class="winner" style="text-align: center;"></h2>
+
+  <h4>Wins: <span class="Wins"> </span>  Losses:<span class="losses"></span> Ties:<span class="Ties"></span> </h4>
+  
+  <button onclick=reset()>Reset Score</button>
+
+
+</div>
+  
+  <script
+     src="Javascripts/RockPaperScissors.js"></script>
+  
+</body>
+</html>
